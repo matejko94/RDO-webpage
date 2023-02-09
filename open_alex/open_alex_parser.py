@@ -7,7 +7,7 @@ import requests
 import sys
 from datetime import datetime, timedelta
 
-es = Elasticsearch("http://localhost:9200", basic_auth=('elastic', 'changeme'))
+es = Elasticsearch("http://localhost:9200", basic_auth=('elastic', 'changeme'), timeout=60, max_retries=10, retry_on_timeout=True)
 es.info().body
 
 DATE_FORMAT = '%Y-%m-%d'
