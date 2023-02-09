@@ -23,7 +23,7 @@ expansions = "geo.place_id,author_id,referenced_tweets.id,in_reply_to_user_id,re
 place_fields = "contained_within,country,country_code,full_name,geo,id,name,place_type"
 user_fields = "created_at,description,entities,id,location,name,pinned_tweet_id,profile_image_url,protected,public_metrics,url,username"
 query = "%23rareDisease"
-query = "%23kleefstrasyndrome%20OR%20kleefstrasyndrome"
+query = "%23kleefstrasyndrome%20OR%20kleefstra syndrome"
 url = f"https://api.twitter.com/2/tweets/search/all?tweet.fields={tweet_fields}&expansions={expansions}&place.fields={place_fields}&user.fields={user_fields}&query={query}"
 
 payload = {}

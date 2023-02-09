@@ -1,0 +1,73 @@
+GET open-alex/_count
+
+GET open-alex
+
+
+GET open-alex/_search?q=Phelan-McDermid
+
+POST open-alex/_search
+{
+  "query": {
+    "match": {
+      "phrase": {
+        "query" : "partial"
+      }
+    }
+  }
+}
+
+GET open-alex-extended/_stats
+
+GET open-alex-extended/_count
+
+GET open-alex-extended/_search?q="kleefstra syndrome"
+
+GET open-alex-extended/_search?q=9q34
+
+
+GET open-alex-extended/_search?q="angelman syndrome"
+
+GET open-alex-extended/_search?q="cornelia de lange syndrome"
+
+GET open-alex-extended/_search?q="phelan-Mcdermid syndrome"
+
+GET open-alex-extended/_search?q=Fragile X
+
+
+GET open-alex-extended/_search?q="Pitt Hopkins syndrome"
+
+
+GET open-alex-extended/_search?q="Prader-will syndrome"
+
+
+GET open-alex-extended/_search?q="foxg1 syndrome"
+
+
+GET open-alex-extended/_search?q="koolen-de Vries syndrome"
+
+
+GET open-alex-extended/_search?q="Wiedemann Steiner syndrome"
+
+GET open-alex-extended/_search?q="Kabuki syndrome"
+
+
+GET open-alex-extended/_search?q="Rett syndrome"
+
+GET open-alex-extended/_search?q="SYNGAP1 syndrome"
+
+GET open-alex-extended/_search?q="SATB2 syndrome"
+
+GET open-alex-extended/_search?q="CTNNB1 syndrome"
+
+
+
+POST open-alex/_search
+{
+  "query": {
+    "match": {
+      "phrase": {
+        "query" : "partial"
+      }
+    }
+  }
+}
