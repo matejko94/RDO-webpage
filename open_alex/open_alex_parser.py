@@ -41,27 +41,38 @@ cursors = ['*']
 concepts = '%7C'.join(['C2779701055', 'C150194340', 'C68873052', 'C54355233', 'C75480439', 'C2779388368',
                        'C2779778371', 'C2777471088', 'C551499885', 'C74187038'])
 import time
+ex = 0
 while cursors != 0:
     c = cursors.pop()
-    url = f'https://api.openalex.org/works?filter=concepts.id%3A{concepts}%2Cfrom_publication_date%3A{d}&per_page=200&cursor={c}'
-    x = requests.get(url)
-    result = x.json()
-    records = result['results']
-    cursors.append(result['meta']['next_cursor'])
-    t = time.time()
-    print(cursors)
-    t_ms = int(t * 1000)
-    time.sleep(0.01)
-    with open('./../../openalex/'+str(t_ms)+'_'+str(random.randint(1, 999))+".txt", "x") as f:
-        f.write(json.dumps(result))
+    try:
+        url = f'https://api.openalex.org/works?filter=concepts.id%3A{concepts}%2Cfrom_publication_date%3A{d}&per_page=200&cursor={c}'
+        x = requests.get(url)
+        result = x.json()
+        records = result['results']
+        cursors.append(result['meta']['next_cursor'])
+        t = time.time()
+        print(cursors)
+        print(url)
+        t_ms = int(t * 1000)
+        time.sleep(0.01)
+        with open('./../../openalex/'+str(t_ms)+'_'+str(random.randint(1, 999))+".txt", "x") as f:
+            f.write(json.dumps(result))
 
-    for record in records:
-        # print(record)
-        es.index(index="open-alex-extended",
-                 id=record['id'],
-                 document={'id': record['id'],
-                           'title': record['title'],
-                           'display_name': record['display_name']})
+        for record in records:
+            # print(record)
+            es.index(index="open-alex-extended2",
+                     id=record['id'],
+                     document={'id': record['id'],
+                               'title': record['title'],
+                               'display_name': record['display_name']})
+        ex = 0
+    except Exception as ex:
+        if ex == 3:
+            break
+        cursors.insert(0, c)
+        print(ex)
+        time.sleep(5)
+
 
 config = configparser.ConfigParser()
 config.read('example.ini')

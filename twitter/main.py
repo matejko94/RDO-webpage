@@ -1,4 +1,7 @@
 import base64
+import random
+import time
+
 import requests
 import json
 
@@ -23,23 +26,38 @@ expansions = "geo.place_id,author_id,referenced_tweets.id,in_reply_to_user_id,re
 place_fields = "contained_within,country,country_code,full_name,geo,id,name,place_type"
 user_fields = "created_at,description,entities,id,location,name,pinned_tweet_id,profile_image_url,protected,public_metrics,url,username"
 query = "%23rareDisease"
+start_time='2006-05-01T00:00:01Z'
 query = "%23kleefstrasyndrome%20OR%20kleefstra syndrome"
-url = f"https://api.twitter.com/2/tweets/search/all?tweet.fields={tweet_fields}&expansions={expansions}&place.fields={place_fields}&user.fields={user_fields}&query={query}"
+query = "%23kleefstrasyndrome"
+url = f"https://api.twitter.com/2/tweets/search/all?tweet.fields={tweet_fields}&expansions={expansions}&place.fields={place_fields}&user.fields={user_fields}&start_time={start_time}&query={query}"
 
-payload = {}
-headers = {
-    'Authorization': f'Bearer {bearer}',
-    #  'Cookie': 'guest_id=v1%3A167292706625677604'
-}
+next_tokens = [None]
 
-response = requests.request("GET", url, headers=headers, data=payload)
-print(response.text)
 
-print(json.loads(response.text)['meta'])
-print(json.loads(response.text)['includes'])
+while len(next_tokens) != 0:
+    next_token = next_tokens.pop()
+    payload = {}
+    headers = {
+        'Authorization': f'Bearer {bearer}',
+        #  'Cookie': 'guest_id=v1%3A167292706625677604'
+    }
+    if next_token is not None:
+        url = url + '&next_token=' + next_token
+    response = requests.request("GET", url, headers=headers, data=payload)
+    time.sleep(random.randint(5, 10))
 
-for el in json.loads(response.text)['data']:
-    print(el)
+    data = response.json()
+    print(data)
+    if 'next_token' in data['meta']:
+        next_tokens.append(data['meta']['next_token'])
+    print(next_tokens)
+
+    for el in data['data']:
+       print(el)
+    #print(json.loads(response.text)['meta'])
+    #print(json.loads(response.text)['includes'])
+
+
 # print(response.text)
 
 
