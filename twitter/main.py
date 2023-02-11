@@ -5,8 +5,8 @@ import time
 import requests
 import json
 
-str = '4psiZ6Bef5ZQ80UPhIlrXODa3:d4wMmIwjTrpkrpxnNgquizKsdLedeMV5M56hiw4dKrD5Qbplbh'
-b = str.encode("ascii")
+str_token = '4psiZ6Bef5ZQ80UPhIlrXODa3:d4wMmIwjTrpkrpxnNgquizKsdLedeMV5M56hiw4dKrD5Qbplbh'
+b = str_token.encode("ascii")
 basic = base64.b64encode(b).decode('ascii')
 url = f"https://api.twitter.com/oauth2/token?grant_type=client_credentials"
 headers = {
@@ -74,24 +74,23 @@ for query_parm in query_parms:
             'Authorization': f'Bearer {bearer}',
             #  'Cookie': 'guest_id=v1%3A167292706625677604'
         }
+        print(query_parm)
         if next_token is not None:
             url = f"https://api.twitter.com/2/tweets/search/all?tweet.fields={tweet_fields}&expansions={expansions}&place.fields=" \
-                  f"{place_fields}&user.fields={user_fields}&start_time={start_time}&query={query}&max_results=100&next_token={next_token}"
+                  f"{place_fields}&user.fields={user_fields}&start_time={start_time}&query={query_parm}&max_results=100&next_token={next_token}"
         response = requests.request("GET", url, headers=headers, data=payload)
         print(url)
         print(next_tokens)
-        time.sleep(random.randint(5, 10))
+        time.sleep(random.randint(2, 5))
 
         data = response.json()
-        print(data)
-        # print(data)
+
         if 'next_token' in data['meta']:
             next_tokens.append(data['meta']['next_token'])
-        print(next_tokens)
         t = time.time()
         t_ms = int(t * 1000)
         time.sleep(0.01)
-        with open('./../../twiteer/' + str(t_ms) + '_' + str(random.randint(1, 999)) + ".txt", "x") as f:
+        with open('./../../twiteer/' + str(query_parm) + '_' + str(t_ms) + '_' + str(random.randint(1, 999)) + ".txt", "x") as f:
             f.write(json.dumps(data))
 
     # for el in data['data']:
