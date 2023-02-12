@@ -66,74 +66,39 @@ for query_parm in query_parms:
     url = f"https://api.twitter.com/2/tweets/search/all?tweet.fields={tweet_fields}&expansions={expansions}&place.fields={place_fields}&user.fields={user_fields}&start_time={start_time}&query={query_parm}&max_results=100"
 
     next_tokens = [None]
-
     while len(next_tokens) != 0:
         next_token = next_tokens.pop()
-        payload = {}
-        headers = {
-            'Authorization': f'Bearer {bearer}',
-            #  'Cookie': 'guest_id=v1%3A167292706625677604'
-        }
-        print(query_parm)
-        if next_token is not None:
-            url = f"https://api.twitter.com/2/tweets/search/all?tweet.fields={tweet_fields}&expansions={expansions}&place.fields=" \
-                  f"{place_fields}&user.fields={user_fields}&start_time={start_time}&query={query_parm}&max_results=100&next_token={next_token}"
-        response = requests.request("GET", url, headers=headers, data=payload)
-        print(url)
-        print(next_tokens)
-        time.sleep(random.randint(2, 5))
+        try:
 
-        data = response.json()
+            payload = {}
+            headers = {
+                'Authorization': f'Bearer {bearer}',
+                #  'Cookie': 'guest_id=v1%3A167292706625677604'
+            }
+            print(query_parm)
+           # url = 'https://api.twitter.com/2/tweets/search/all?tweet.fields=attachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,public_metrics,possibly_sensitive,referenced_tweets,reply_settings,source,text,withheld&expansions=geo.place_id,author_id,referenced_tweets.id,in_reply_to_user_id,referenced_tweets.id.author_id&place.fields=contained_within,country,country_code,full_name,geo,id,name,place_type&user.fields=created_at,description,entities,id,location,name,pinned_tweet_id,profile_image_url,protected,public_metrics,url,username&start_time=2006-05-01T00:00:01Z&query=%23RareDisease&max_results=100&next_token=b26v89c19zqg8o3fnlu1d2tlu2uk5r73t7i8k6dsn3ibh'
+            if next_token is not None:
+                url = f"https://api.twitter.com/2/tweets/search/all?tweet.fields={tweet_fields}&expansions={expansions}&place.fields=" \
+                      f"{place_fields}&user.fields={user_fields}&start_time={start_time}&query={query_parm}&max_results=100&next_token={next_token}"
+            response = requests.request("GET", url, headers=headers, data=payload)
+            print(url)
+            print(next_tokens)
+            time.sleep(random.randint(2, 5))
 
-        if 'next_token' in data['meta']:
-            next_tokens.append(data['meta']['next_token'])
-        t = time.time()
-        t_ms = int(t * 1000)
-        time.sleep(0.01)
-        with open('./../../twiteer/' + str(query_parm) + '_' + str(t_ms) + '_' + str(random.randint(1, 999)) + ".txt", "x") as f:
-            f.write(json.dumps(data))
+            data = response.json()
 
-    # for el in data['data']:
-    #    print(el)
-    # print(json.loads(response.text)['meta'])
-    # print(json.loads(response.text)['includes'])
+            if 'meta' in data and 'next_token' in data['meta']:
+                next_tokens.append(data['meta']['next_token'])
+            t = time.time()
+            t_ms = int(t * 1000)
+            time.sleep(0.01)
+            with open('./../../twiteer/' + str(query_parm) + '_' + str(t_ms) + '_' + str(random.randint(1, 999)) + ".txt", "x") as f:
+                f.write(json.dumps(data))
 
-# print(response.text)
-
-
-# import tweepy
-#
-# # API credentials here
-# consumer_key = 'zjI7NAsQ9rSbkR1xjbK8zhgrq'
-# consumer_secret = 'Npd0NbD8SaSPDGSo9Bdi2tMpRnBIgoY4TMEXFPWPf5issYlXpn'
-# access_token = '2190052255-xEnWT5Ej0VMKCaHv4fvcQAHSdxYUsTWqv4Iz3mi'
-# access_token_secret = 'HJQ6YHjSIOXOAtUAX2QpujjG7FSHA2FQqgpcUsiXorJ8D'
-#
-# auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-# auth.set_access_token(access_token, access_token_secret)
-# api = tweepy.API(auth,wait_on_rate_limit=True)
-#
-# searchString = "iPhone"
-#
-# cursor = tweepy.Cursor(api.search_full_archive, q=searchString, count=20, lang="en", tweet_mode='extended')
-#
-# maxCount = 1
-# count = 0
-# for tweet in cursor.items():
-#     print()
-#     print("Tweet Information")
-#     print("================================")
-#     print("Text: ", tweet.full_text)
-#     print("Geo: ", tweet.geo)
-#     print("Coordinates: ", tweet.coordinates)
-#     print("Place: ", tweet.place)
-#     print()
-#
-#     print("User Information")
-#     print("================================")
-#     print("Location: ", tweet.user.location)
-#     print("Geo Enabled? ", tweet.user.geo_enabled)
-#
-#     count = count + 1
-#     if count == maxCount:
-#         break;
+            ex = 0
+        except Exception as ex:
+            if ex == 3:
+                break
+            next_tokens.insert(0, next_token)
+            print(ex)
+            time.sleep(180)
