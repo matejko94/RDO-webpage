@@ -1,4 +1,4 @@
-GET open-alex/_count
+-GET open-alex/_count
 
 GET open-alex
 

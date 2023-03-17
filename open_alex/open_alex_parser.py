@@ -60,11 +60,18 @@ while cursors != 0:
 
         for record in records:
             # print(record)
-            es.index(index="open-alex-extended2",
+            es.index(index="open-alex-extended3",
                      id=record['id'],
                      document={'id': record['id'],
+                               'ids': record['ids'],
+                               'doi': record['doi'],
                                'title': record['title'],
-                               'display_name': record['display_name']})
+                               'publication_date': record['publication_date'],
+                               'display_name': record['display_name'],
+                               'authorships': record['authorships'],
+                               'mesh': record['mesh'],
+                               'concepts': record['concepts']
+                               } )
         ex = 0
     except Exception as ex:
         if ex == 3:
