@@ -16,17 +16,18 @@ es.info().body
 for onlyfiles in onlyfiles:
     with open(mypath + '/' + onlyfiles) as f:
         data = json.loads(f.read())
-        for d in data['data']:
-            print(d)
-            es.update(index="twiter",
-                      id=d['id'],
-                      doc= {'id': d['id'],
-                          'text': d['text'],
-                          'edit_history_tweet_ids': d['edit_history_tweet_ids'],
-                          'conversation_id': d['conversation_id'],
-                          'lang': d['lang'],
-                          'reply_settings': d['reply_settings'],
-                          'author_id': d['author_id'],
-                          'created_at': d['created_at'],
-                          'public_metrics': d['public_metrics']},
-                      doc_as_upsert= True)
+        if 'data' in data:
+            for d in data['data']:
+                print(d)
+                es.update(index="twiter",
+                          id=d['id'],
+                          doc= {'id': d['id'],
+                              'text': d['text'],
+                              'edit_history_tweet_ids': d['edit_history_tweet_ids'],
+                              'conversation_id': d['conversation_id'],
+                              'lang': d['lang'],
+                              'reply_settings': d['reply_settings'],
+                              'author_id': d['author_id'],
+                              'created_at': d['created_at'],
+                              'public_metrics': d['public_metrics']},
+                          doc_as_upsert= True)
