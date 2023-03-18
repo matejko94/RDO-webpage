@@ -45,6 +45,32 @@
       float: right;
     }
 
+    .div-center {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .center-justified {
+      text-align: justify;
+      text-align-last: center;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+    .grid-container {
+      display: grid;
+      column-gap: 10px;
+      grid-template-columns: auto auto auto auto auto;
+    }
+    .grid-item {
+      background-color: rgba(255, 255, 255, 1);
+      border: 0px solid rgba(0, 0, 0, 0.8);
+      font-size: 15px;
+      text-align: center;
+    }
+
     @media screen and (max-width: 500px) {
       .header a {
         float: none;
@@ -68,10 +94,50 @@
   </div>
 </div>
 
-<div style="padding-left:20px">
-  <h1>Responsive Header</h1>
-  <p>Resize the browser window to see the effect.</p>
-  <p>Some content..</p>
+<div class="center-justified">
+    <img src="images/RareDiseasesObservatory_logo.svg" width="194" height="83"/>
+    <h3>RARE DISEASES OBSERVATORY</h3>
+    <br>
+    <p>There are <b>over 7000 rare diseases</b>, and the majority are under researched.</p>
+    <br>
+    <p>The Rare Diseases Observatory is enabling easy rare disease monitoring. Combining different data sources, we are bringing in front the needed information and knowledge, to empower all: patients, researchers and clinicians.</p>
+    <br>
+    <p>Our initial focus is on <b>rare neurodevelopmental disorders (NDDs).</b> </p>
+    <br>
+    <p><b>NDDs and their occurrence in GLOBAL MEDIA news, social media & scientific PUBLICATIONS</b></p>
+    <p> 16 NDDs are monitored in this pilot version.</p>
+   <div class="flourish-embed flourish-hierarchy" data-src="visualisation/12923003"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+    <p>Estimated 400 million people around the world have a rare disease, but only a handful of those <br>
+      have it treated, as only 5% of rare diseases has a chance of treatment.<br>
+      That is why rare diseases have to be researched.</p>
+
+    </br>
+    <p><b>WE ARE MONITORING RARE DISEASES THROUGH DIFFERENT DATA SOURCES & INDICATORS</b></p>
+    <div class="grid-container">
+      <div class="grid-item"><img src="images/RDinScientificPublications.svg" width="168" height="72"/></div>
+      <div class="grid-item"><img src="images/RDinGlobalNews.svg" width="168" height="72"/></div>
+      <div class="grid-item"><img src="images/RDinSocialMedia.svg" width="168" height="72"/></div>
+      <div class="grid-item"><img src="images/RD&GeneTherapy.svg" width="168" height="72"/></div>
+      <div class="grid-item"><img src="images/RD&OrphanDrugMonitoring.svg" width="168" height="72"/></div>
+      <div class="grid-item"><p style="color: #52A95D"><b>RARE DISEASES IN<BR> SCIENTIFIC<BR> PUBLICATIONS</b></p></div>
+      <div class="grid-item"><p style="color: #3090AA"><b>RARE DISEASES IN<BR> GLOBAL NEWS</b></p></div>
+      <div class="grid-item"><p style="color: #E44BAC"><b>RARE DISEASES IN<BR> SOCIAL MEDIA</b></p></div>
+      <div class="grid-item"><p style="color: #C43B75"><b>RARE DISEASES AND<BR> GENE THERAPY</b></p></div>
+      <div class="grid-item"><p style="color: #F39126"><b>RARE DISEASES AND<BR> ORPHAN DRUGS</b></p></div>
+      <div class="grid-item"><p>Neque porro quisquam<BR> est qui dolorem ipsum<BR> quia dolor sit amet,<BR> consectetur, adipisci<BR> velit.</p></div>
+      <div class="grid-item"><p>Neque porro quisquam<BR> est qui dolorem ipsum<BR> quia dolor sit amet,<BR> consectetur, adipisci<BR> velit.</p></div>
+      <div class="grid-item"><p>Neque porro quisquam<BR> est qui dolorem ipsum<BR> quia dolor sit amet,<BR> consectetur, adipisci<BR> velit.</p></div>
+      <div class="grid-item"><p>Neque porro quisquam<BR> est qui dolorem ipsum<BR> quia dolor sit amet,<BR> consectetur, adipisci<BR> velit.</p></div>
+      <div class="grid-item"><p>Neque porro quisquam<BR> est qui dolorem ipsum<BR> quia dolor sit amet,<BR> consectetur, adipisci<BR> velit.</p></div>
+    </div>
+    <p><b>CREDITS</b></p>
+    <div class="grid-container">
+        <div class="grid-item"><img src="images/JozefStefanInstitute.svg" width="168" height="72"/></div>
+        <div class="grid-item"><img src="images/IRCAI.svg" width="168" height="72"/></div>
+        <div class="grid-item"><img src="images/IDefineEurope.svg" width="168" height="72"/></div>
+        <div class="grid-item"><img src="images/EventRegistry.svg" width="168" height="72"/></div>
+    </div>
+
 </div>
 
 </body>
