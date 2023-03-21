@@ -1,0 +1,222 @@
+
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    font-family: Inter,serif;
+}
+
+.header {
+    overflow: hidden;
+    padding-top: 24px;
+    padding-bottom: 50px;
+}
+
+.pt-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pd-4 {
+    padding: 6px;
+}
+.pd {
+    padding: 12px;
+}
+
+.header a {
+    font-family: 'Inter';
+    font-weight: bolder;
+    color: black;
+    text-align: center;
+    margin-right: 80px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 22px;
+    border-radius: 4px;
+}
+
+
+.header a:hover {
+    opacity: 60%;
+}
+
+.header a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.header-right {
+    float: right;
+}
+
+.div-title {
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.div-subtitle {
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.div-text {
+    font-family: 'Inter';
+    line-height: 26px;
+    font-size: 18px;
+}
+
+.div-center {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-justified {
+    text-align: justify;
+    text-align-last: center;
+}
+
+.rowWrapper:hover {
+    /*background-color: #eee;*/
+    /*color: black;*/
+    /*border-radius: 5px;*/
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    opacity: 60%;
+}
+
+.grid-container {
+    display: grid;
+    column-gap: 10px;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-container-footer {
+    display: grid;
+    column-gap: 10px;
+    grid-auto-columns: minmax(10px, auto);
+    grid-template-columns: auto auto auto auto;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 1);
+    border: 0px solid rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+    text-align: center;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+    font-family: 'Inter';
+
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    border-width: 7px;
+    border-style: solid;
+    /* border-color: #F39126;*/
+    border-image: linear-gradient(to right, #FEE391 , #FE9E6D 12%, #C43B75 24%, #B93495 36%, #701C7A 50%, #246D95 63%, #1B296D 75%, #0E4D40 90%, #8ED16C) 1;
+    /*   padding: 15px;*/
+    position: absolute;
+    z-index: 1;
+    top: 135%; /* changed bottom to top */
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 105%; /* changed top to bottom */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent #701C7A transparent; /* changed border botom color instead of top*/
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+@media only screen and(max-width: 1320px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@media only screen and(max-width: 991px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and(max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and(max-width: 540px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+@media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+}
