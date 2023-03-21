@@ -41,6 +41,11 @@ body {
     opacity: 60%;
 }
 
+.max-width {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 .header a.active {
     background-color: dodgerblue;
     color: white;
