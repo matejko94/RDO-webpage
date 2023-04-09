@@ -26,7 +26,7 @@ body {
     font-weight: bold;
     color: black;
     text-align: center;
-    margin-right: 80px;
+    margin-right: 60px;
     text-decoration: none;
     font-size: 18px;
 }
@@ -196,6 +196,49 @@ Noga in grid
   /*      background-color: #1c7430;*/
     }
 
+    .text-top-padding {
+        padding-top: 40px;
+    }
+
+    .text-bottom-padding {
+        padding-bottom: 40px;
+    }
+
+    .text-small-bottom-padding {
+        padding-bottom: 30px;
+    }
+
+
+    .div-title {
+        font-size: 41px;
+        font-weight: 500;
+        line-height: 35px;
+    }
+
+    .div-subtitle {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .div-text {
+        text-align: justify;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 200;
+    }
+
+    .grid-title-text {
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 500;
+    }
+    .grid-text {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 200;
+    }
+
     .grid-container {
         display:flex ;
         column-gap: 25px;
@@ -230,6 +273,49 @@ Noga in grid
     .container {
         padding: 0 15px;
     /*    background-color: #117a8b;*/
+    }
+
+
+    .text-top-padding {
+        padding-top: 40px;
+    }
+
+    .text-bottom-padding {
+        padding-bottom: 40px;
+    }
+
+    .text-small-bottom-padding {
+        padding-bottom: 30px;
+    }
+
+    .div-title {
+        font-size: 41px;
+        font-weight: 500;
+        line-height: 35px;
+    }
+
+    .div-subtitle {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .div-text {
+        text-align: justify;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 200;
+    }
+
+    .grid-title-text {
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 500;
+    }
+    .grid-text {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 200;
     }
 
     .grid-container {
@@ -269,6 +355,50 @@ Noga in grid
         padding: 0 15px;
      /*   background-color: #f1b0b7;*/
     }
+
+
+    .text-top-padding {
+        padding-top: 30px;
+    }
+
+    .text-bottom-padding {
+        padding-bottom: 30px;
+    }
+
+    .text-small-bottom-padding {
+        padding-bottom: 20px;
+    }
+
+    .div-title {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+
+    .div-subtitle {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 12px;
+    }
+
+    .div-text {
+        text-align: justify;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 200;
+    }
+
+    .grid-title-text {
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 500;
+    }
+    .grid-text {
+        font-size: 10px;
+        line-height: 12px;
+        font-weight: 200;
+    }
+
 
     .grid-container {
         display: flex;
