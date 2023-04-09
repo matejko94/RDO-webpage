@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BVM3TVD7J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9BVM3TVD7J');
+    </script>
+    <link href="News/news.info.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title>Media</title>
+</head>
+<body>
+<h1>Media</h1>
+<p>
+    This tab is exploring the information from news and social media in the context of the exploration of water related
+    topics that include when the weather is favourable to floods and the historical information from news and published
+    research on these weather-related events and how to better take decisions to solve them. The water-related news are
+    sourced in real-time using powerful text mining methods based on Wikipedia concepts to collect about 1500 news
+    articles per day across more than 60 languages, of which a part relates to water events around the world. When
+    selecting the Use Case in the main menu on the left, the real-time stream of news is automatically configured to
+    search for topics that relate to the priorities and interests of the stakeholders that helped defining this view,
+    thus addressing the local interests.
+</p>
+<figure>
+    <img src="/assets/images/news.png"/>
+    <figcaption>Water-related news monitoring</figcaption>
+</figure>
+
+<p>
+    The configuration of the news streams is done directly over the news engine API that is serving them but can be
+    tested in the news monitoring part of the system. The user can choose water topics of interest and define priority
+    levels, choose languages and categories, as well as define how rigorous this configuration must be, to model how
+    much news articles the system is collecting.
+</p>
+<figure>
+    <img src="/assets/images/news_config.png"/>
+    <figcaption>Comprehensive configuration of news sources</figcaption>
+</figure>
+
+<p>
+    When the user aims to explore a certain water-related event, it can do so in the larger news engine EventRegistry.
+    This will allow the user to further explore concepts related to the collected articles from a query, and the
+    fundamental information that the news collection provides about the event. The user can explore the news through
+    time and learn from what was published in the context of similar events in the region or other world regions where
+    best practices can be derived and help planning for the future happenings.
+</p>
+<figure>
+    <img src="/assets/images/historical_news_analysis.png"/>
+    <figcaption>Historical News Analysis @ External Exploration Dashboard</figcaption>
+</figure>
+<p>
+    The system also allows the user to explore other topics that are related to the query formulated over news articles
+    or events, to better understand how much are other topics (e.g. economy, education or ) associated with the water
+    topic in analysis. At all times the subsample of news articles can be requested for further analysis.
+</p>
+<figure>
+    <img src="/assets/images/news_categorization.png"/>
+    <figcaption>Water News Categorification @ External Exploration Dashboard</figcaption>
+</figure>
+
+
+<p>
+    The social media is also present through Facebook and Twitter with different data access characteristics, and
+    applications. Through the news engine Event Registry we are able to see the number of times that certain news is
+    shared in Facebook and, thus, its impact in this online community.
+    On the other hand, we are also collecting the tweets related to certain water topics based on key-phrases in the
+    original languages and locations of the NAIADES Use Cases. In the tab “Twitter Dashboard” we present several data
+    visualisation modules and search boxes where the user can further configure the search to access, e.g., the average
+    sentiment of the posts or the main topics over keywords.
+
+</p>
+<figure>
+    <img src="/assets/images/twitter.png"/>
+    <figcaption>Real-time analysis of Twitter data</figcaption>
+</figure>
+<p>
+    Moreover, we are exploring the potential to extract real-time insights from social media based on the news story of
+    a certain water-related event taking into consideration certain conditions from other data sources as, e.g., the
+    weather. This interaction between news and social media is based on the ingestion of filtered news streams and on
+    analytics on social media about weather-related events that can help decision-making and trigger alarms.
+</p>
+<figure>
+    <img src="/assets/images/twitter_dashboard_table.png"/>
+    <figcaption>Analysis of Tweets and news articles over a certain water-related event</figcaption>
+</figure>
+
+<p>
+    In line with the capabilities offered by this comprehensive view, one example of its usage can start by the
+    real-time news monitoring of water-related events regarding the recent flooding in Germany and Belgium, to configure
+    the social media collection to the weather conditions in order to provide specific alarms. Then, to use the news
+    engine Event Registry to explore news related to this event and other similar in order to study the sequence of
+    happenings and use this to better plan for this events in the location of the user of the Water Observatory.
+</p>
+
+</body>
+<script src="News/news.info.js"></script>
+</html>
