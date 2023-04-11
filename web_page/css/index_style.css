@@ -20,10 +20,10 @@ body {
     float: right;
 }
 
+
 .header {
     /*overflow: hidden;*/
     height:80px;
-
     padding-top: 10px;
     /*padding-bottom: 0px;*/
     background-color: #DCDCFF;
@@ -45,7 +45,6 @@ body {
 
 
 .footer {
-    height: 120px;
     background-color: #DCDCFF;
 }
 
@@ -65,11 +64,16 @@ body {
 }
 
 
-.max-width {
+.max-width-flourish {
     /*padding-left: 12%;*/
     /*padding-right: 12%;*/
     padding-left: 110px;
     padding-right: 110px;
+}
+
+.img-size-menu {
+    width: 120px;
+    height: 120px;
 }
 
 .div-width-title {
@@ -127,6 +131,7 @@ body {
 
 .grid-container {
     display: grid;
+    column-gap: 25px;
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
@@ -146,9 +151,11 @@ Noga in grid
 */
 .grid-container-footer {
     display: grid;
+    height: 120px;
     column-gap: 10px;
     grid-auto-columns: minmax(10px, auto);
     grid-template-columns: auto auto auto auto;
+    align-items: center;
 }
 
 
@@ -157,7 +164,7 @@ Noga in grid
     /* background-color: rgba(255, 255, 255, 0);*/
     border: 0px solid rgba(0, 0, 0, 0.8);
     font-size: 15px;
-    text-align: center;
+    align-items: center;
 }
 
 .container {
@@ -168,8 +175,10 @@ Noga in grid
 }
 
 .a {
+    text-align: center;
     text-decoration: none;
     color: black;
+
 }
 
 .a:hover {
@@ -178,17 +187,17 @@ Noga in grid
     opacity: 60%;
 }
 
-.img-size {
+.img-size-affiliation {
    width: 218px;
    height: 84px;
 }
 
-.img-size-idefine {
+.img-size-idefine-affiliation {
     width: 173px;
     height: 72px;
 }
 
-.img-size-er {
+.img-size-er-affiliation {
     width: 195px;
     height: 80px;
 }
@@ -215,8 +224,22 @@ Noga in grid
   /*      background-color: #1c7430;*/
     }
 
+    .navbar-nav .nav-item .nav-link {
+        line-height: 30px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        margin-right: 60px;
+        text-decoration: none;
+        font-size: 18px;
+    }
 
-    .max-width {
+    .img-size-menu {
+        width: 85px;
+        height: 85px;
+    }
+
+    .max-width-flourish {
         /*padding-left: 12%;*/
         /*padding-right: 12%;*/
         padding-left: 90px;
@@ -279,17 +302,17 @@ Noga in grid
         width: 230px;
     }
 
-    .img-size {
+    .img-size-affiliation {
         width: 177px;
         height: 69px;
     }
 
-    .img-size-idefine {
+    .img-size-idefine-affiliation {
         width: 140px;
         height: 58px;
     }
 
-    .img-size-er {
+    .img-size-er-affiliation {
         width: 158px;
         height: 60px;
     }
@@ -302,12 +325,33 @@ Noga in grid
     /*    background-color: #117a8b;*/
     }
 
+    .navbar-nav .nav-item .nav-link {
+        line-height: 30px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        margin-right: 60px;
+        text-decoration: none;
+        font-size: 18px;
+    }
 
-    .max-width {
+    .img-size-menu {
+        width: 85px;
+        height: 85px;
+    }
+
+    .img-size {
         /*padding-left: 12%;*/
         /*padding-right: 12%;*/
         padding-left: 65px;
         padding-right: 65px;
+    }
+
+    .max-width-flourish {
+        /*padding-left: 12%;*/
+        /*padding-right: 12%;*/
+        padding-left: 45px;
+        padding-right: 45px;
     }
 
     .text-top-padding {
@@ -355,6 +399,7 @@ Noga in grid
     .grid-container {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
         justify-content: center;
         column-gap: 25px;
         grid-template-columns: repeat(3, 1fr);
@@ -367,17 +412,17 @@ Noga in grid
 
     }
 
-    .img-size {
+    .img-size-affiliation {
         width: 97px;
         height: 37px;
     }
 
-    .img-size-idefine {
+    .img-size-idefine-affiliation {
         width: 76px;
         height: 31px;
     }
 
-    .img-size-er {
+    .img-size-er-affiliation {
         width: 85px;
         height: 60px;
     }
@@ -390,7 +435,22 @@ Noga in grid
      /*   background-color: #f1b0b7;*/
     }
 
-    .max-width {
+    .navbar-nav .nav-item .nav-link {
+        line-height: 30px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        margin-right: 30px;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .img-size-menu {
+        width: 60px;
+        height: 60px;
+    }
+
+    .max-width-flourish {
         /*padding-left: 12%;*/
         /*padding-right: 12%;*/
         padding-left: 45px;
@@ -443,6 +503,7 @@ Noga in grid
     .grid-container {
         display: flex;
         flex-wrap: wrap;
+        column-gap: 20px;
         justify-content: center;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -454,17 +515,17 @@ Noga in grid
     }
 
 
-    .img-size {
+    .img-size-affiliation {
         width: 97px;
         height: 37px;
     }
 
-    .img-size-idefine {
+    .img-size-idefine-affiliation {
         width: 76px;
         height: 31px;
     }
 
-    .img-size-er {
+    .img-size-er-affiliation {
         width: 85px;
         height: 60px;
     }
