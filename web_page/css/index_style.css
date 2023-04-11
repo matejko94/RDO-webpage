@@ -66,10 +66,10 @@ body {
 
 
 .max-width {
-    padding-left: 12%;
-    padding-right: 12%;
-    /*padding-left: 110px;*/
-    /*padding-right: 110px;*/
+    /*padding-left: 12%;*/
+    /*padding-right: 12%;*/
+    padding-left: 110px;
+    padding-right: 110px;
 }
 
 .div-width-title {
@@ -78,12 +78,16 @@ body {
 
 .div-title {
     font-size: 45px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 53px;
 }
 
+/*.my-dropdown-item{*/
+/*    padding:2rem 2rem;*/
+/*}*/
+
 .div-subtitle {
-    font-weight: 500;
+    font-weight: bold;
     font-size: 20px;
 }
 
@@ -91,7 +95,7 @@ body {
     text-align: justify;
     font-size: 24px;
     line-height: 30px;
-    font-weight: 200;
+    font-weight: lighter;
 }
 
 .div-background{
@@ -109,12 +113,12 @@ body {
 .grid-title-text {
     font-size: 24px;
     line-height: 28px;
-    font-weight: 500;
+    font-weight: bold;
 }
 .grid-text {
     font-size: 18px;
     line-height: 20px;
-    font-weight: 200;
+    font-weight: lighter;
 }
 
 /*
@@ -211,6 +215,14 @@ Noga in grid
   /*      background-color: #1c7430;*/
     }
 
+
+    .max-width {
+        /*padding-left: 12%;*/
+        /*padding-right: 12%;*/
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
     .text-top-padding {
         padding-top: 40px;
     }
@@ -226,32 +238,32 @@ Noga in grid
 
     .div-title {
         font-size: 41px;
-        font-weight: 500;
+        font-weight: bold;
         line-height: 35px;
     }
 
     .div-subtitle {
-        font-weight: 500;
         font-size: 24px;
         line-height: 28px;
+        font-weight: bold;
     }
 
     .div-text {
         text-align: justify;
         font-size: 18px;
         line-height: 22px;
-        font-weight: 200;
+        font-weight: lighter;
     }
 
     .grid-title-text {
         font-size: 18px;
         line-height: 21px;
-        font-weight: 500;
+        font-weight: bold;
     }
     .grid-text {
         font-size: 14px;
         line-height: 18px;
-        font-weight: 200;
+        font-weight: lighter;
     }
 
     .grid-container {
@@ -290,6 +302,14 @@ Noga in grid
     /*    background-color: #117a8b;*/
     }
 
+
+    .max-width {
+        /*padding-left: 12%;*/
+        /*padding-right: 12%;*/
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+
     .text-top-padding {
         padding-top: 40px;
     }
@@ -304,12 +324,12 @@ Noga in grid
 
     .div-title {
         font-size: 41px;
-        font-weight: 500;
+        font-weight: bold;
         line-height: 35px;
     }
 
     .div-subtitle {
-        font-weight: 500;
+        font-weight: bold;
         font-size: 24px;
         line-height: 28px;
     }
@@ -318,18 +338,18 @@ Noga in grid
         text-align: justify;
         font-size: 18px;
         line-height: 22px;
-        font-weight: 200;
+        font-weight: lighter;
     }
 
     .grid-title-text {
         font-size: 18px;
         line-height: 21px;
-        font-weight: 500;
+        font-weight: bold;
     }
     .grid-text {
         font-size: 14px;
         line-height: 18px;
-        font-weight: 200;
+        font-weight: lighter;
     }
 
     .grid-container {
@@ -370,6 +390,12 @@ Noga in grid
      /*   background-color: #f1b0b7;*/
     }
 
+    .max-width {
+        /*padding-left: 12%;*/
+        /*padding-right: 12%;*/
+        padding-left: 45px;
+        padding-right: 45px;
+    }
 
     .text-top-padding {
         padding-top: 30px;
@@ -385,12 +411,12 @@ Noga in grid
 
     .div-title {
         font-size: 22px;
-        font-weight: 500;
+        font-weight: bold;
         line-height: 19px;
     }
 
     .div-subtitle {
-        font-weight: 500;
+        font-weight: bold;
         font-size: 14px;
         line-height: 12px;
     }
@@ -399,18 +425,18 @@ Noga in grid
         text-align: justify;
         font-size: 12px;
         line-height: 14px;
-        font-weight: 200;
+        font-weight: lighter;
     }
 
     .grid-title-text {
         font-size: 12px;
         line-height: 14px;
-        font-weight: 500;
+        font-weight: bold;
     }
     .grid-text {
         font-size: 10px;
         line-height: 12px;
-        font-weight: 200;
+        font-weight: lighter;
     }
 
 
