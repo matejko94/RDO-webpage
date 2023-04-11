@@ -1,4 +1,11 @@
 
+@font-face {
+    src: url('../RobotoCondensed-Regular.ttf');
+    font-family:'RobotoCondensed';
+    font-style: normal;
+    font-weight: 1 1000;
+}
+
 * {
     box-sizing: border-box;
     font-family: "Roboto Condensed",serif;
@@ -59,8 +66,10 @@ body {
 
 
 .max-width {
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-left: 12%;
+    padding-right: 12%;
+    /*padding-left: 110px;*/
+    /*padding-right: 110px;*/
 }
 
 .div-width-title {
