@@ -1,14 +1,14 @@
 
-@font-face {
-    src: url('../RobotoCondensed-Regular.ttf');
-    font-family:'RobotoCondensed';
-    font-style: normal;
-    font-weight: 1 1000;
-}
+/*@font-face {*/
+/*    src: url('../RobotoCondensed-Regular.ttf');*/
+/*    font-family:'RobotoCondensed';*/
+/*    font-style: normal;*/
+/*    font-weight: 1 1000;*/
+/*}*/
 
 * {
     box-sizing: border-box;
-    font-family: "Roboto Condensed",serif;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 body {
@@ -88,6 +88,7 @@ body {
 }
 
 .div-text {
+    font-family: "Roboto Condensed Light";
     text-align: justify;
     font-size: 24px;
     line-height: 30px;
@@ -112,6 +113,7 @@ body {
     font-weight: 500;
 }
 .grid-text {
+    font-family: "Roboto Condensed Light";
     font-size: 18px;
     line-height: 20px;
     font-weight: 200;
