@@ -224,6 +224,10 @@ Noga in grid
   /*      background-color: #1c7430;*/
     }
 
+    .div-width-title {
+        width: 240px;
+    }
+
     .navbar-nav .nav-item .nav-link {
         line-height: 30px;
         font-weight: bold;
@@ -325,6 +329,10 @@ Noga in grid
     /*    background-color: #117a8b;*/
     }
 
+    .div-width-title {
+        width: 240px;
+    }
+
     .navbar-nav .nav-item .nav-link {
         line-height: 30px;
         font-weight: bold;
@@ -401,14 +409,14 @@ Noga in grid
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        column-gap: 25px;
+        column-gap: 20px;
         grid-template-columns: repeat(3, 1fr);
     }
 
     .grid-item {
         justify-content: center;
         align-items: center;
-        width: 160px;
+        width: 150px;
 
     }
 
@@ -433,6 +441,10 @@ Noga in grid
     .container {
         padding: 0 15px;
      /*   background-color: #f1b0b7;*/
+    }
+
+    .div-width-title {
+        width: 140px;
     }
 
     .navbar-nav .nav-item .nav-link {
@@ -511,7 +523,7 @@ Noga in grid
     .grid-item {
         justify-content: center;
         align-items: center;
-        width: 180px;
+        width: 140px;
     }
 
 
