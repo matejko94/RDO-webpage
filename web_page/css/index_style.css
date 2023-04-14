@@ -67,8 +67,8 @@ body {
 .max-width-flourish {
     /*padding-left: 12%;*/
     /*padding-right: 12%;*/
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
 .img-size-menu {
@@ -86,10 +86,6 @@ body {
     line-height: 53px;
 }
 
-/*.my-dropdown-item{*/
-/*    padding:2rem 2rem;*/
-/*}*/
-
 .div-subtitle {
     font-weight: bold;
     font-size: 20px;
@@ -97,10 +93,11 @@ body {
 
 .div-text {
     text-align: justify;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 21px;
+    line-height: 22px;
     font-weight: lighter;
 }
+
 
 .div-background{
     background-color: #DCDCFF;
@@ -115,12 +112,12 @@ body {
 }
 
 .grid-title-text {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 24px;
     font-weight: bold;
 }
 .grid-text {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
     font-weight: lighter;
 }
@@ -131,7 +128,7 @@ body {
 
 .grid-container {
     display: grid;
-    column-gap: 25px;
+    column-gap: 15px;
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
@@ -163,7 +160,7 @@ Noga in grid
     background-color: #DCDCFF;
     /* background-color: rgba(255, 255, 255, 0);*/
     border: 0px solid rgba(0, 0, 0, 0.8);
-    font-size: 15px;
+    font-size: 10px;
     align-items: center;
 }
 
@@ -246,8 +243,8 @@ Noga in grid
     .max-width-flourish {
         /*padding-left: 12%;*/
         /*padding-right: 12%;*/
-        padding-left: 90px;
-        padding-right: 90px;
+        padding-left: 60px;
+        padding-right: 60px;
     }
 
     .text-top-padding {
@@ -277,25 +274,25 @@ Noga in grid
 
     .div-text {
         text-align: justify;
-        font-size: 18px;
+        font-size: 17px;
         line-height: 22px;
         font-weight: lighter;
     }
 
     .grid-title-text {
-        font-size: 18px;
-        line-height: 21px;
+        font-size: 19px;
+        line-height: 19px;
         font-weight: bold;
     }
     .grid-text {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 18px;
         font-weight: lighter;
     }
 
     .grid-container {
         display:flex ;
-        column-gap: 25px;
+        column-gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
         grid-template-columns: repeat(3, 1fr);
@@ -330,7 +327,7 @@ Noga in grid
     }
 
     .div-width-title {
-        width: 240px;
+        width: 200px;
     }
 
     .navbar-nav .nav-item .nav-link {
@@ -358,8 +355,8 @@ Noga in grid
     .max-width-flourish {
         /*padding-left: 12%;*/
         /*padding-right: 12%;*/
-        padding-left: 45px;
-        padding-right: 45px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     .text-top-padding {
@@ -375,7 +372,7 @@ Noga in grid
     }
 
     .div-title {
-        font-size: 41px;
+        font-size: 31px;
         font-weight: bold;
         line-height: 35px;
     }
@@ -388,14 +385,14 @@ Noga in grid
 
     .div-text {
         text-align: justify;
-        font-size: 18px;
+        font-size: 17px;
         line-height: 22px;
         font-weight: lighter;
     }
 
     .grid-title-text {
-        font-size: 18px;
-        line-height: 21px;
+        font-size: 17px;
+        line-height: 19px;
         font-weight: bold;
     }
     .grid-text {
@@ -416,13 +413,13 @@ Noga in grid
     .grid-item {
         justify-content: center;
         align-items: center;
-        width: 150px;
+        width: 170px;
 
     }
 
     .img-size-affiliation {
-        width: 97px;
-        height: 37px;
+        width: 136px;
+        height: 52px;
     }
 
     .img-size-idefine-affiliation {
@@ -465,8 +462,8 @@ Noga in grid
     .max-width-flourish {
         /*padding-left: 12%;*/
         /*padding-right: 12%;*/
-        padding-left: 45px;
-        padding-right: 45px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .text-top-padding {
@@ -523,7 +520,7 @@ Noga in grid
     .grid-item {
         justify-content: center;
         align-items: center;
-        width: 140px;
+        width: 150px;
     }
 
 
