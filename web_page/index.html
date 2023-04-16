@@ -12,6 +12,7 @@
 
 
     <link rel="stylesheet" href="css/index_style.css">
+    <script src="index.js"></script>
 
 </head>
 <body>
@@ -27,20 +28,24 @@
 
 
 <div class="header">
-    <div class="container">
+    <div class="container d-flex justify-content-between">
         <a href="#default">
             <img src="images/RareDiseasesObservatory_logo.svg" style="margin-top: 15px;" width="70" height="30"/>
         </a>
-        <div class="header-right">
-            <nav class="navbar navbar-expand">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+<!--        <div class="header-right">-->
+            <nav class="navbar navbar-expand-md navbar-light d-flex justify-content-end">
+                <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse d-flex justify-content-start" id="navbarSupportedContent">
+                    <ul class="navbar-nav collor">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle nawbar-header header-hover" href="#" id="navbarDropdown"
-                               role="button " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle navbar-header header-hover show" href="#" id="navbarDropdown"
+                               role="button " data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                 MONITORING
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" aria-expanded="true">
                                 <a class="dropdown-item" href="./html/global_news.html"><img src="images/01_global_news.svg" style="padding-right: 10px;" width="40" height="40"/>Rare diseases in global news</a>
                                 <a class="dropdown-item" href="./html/social_media.html"><img src="images/02_social_media.svg" style="padding-right: 10px;" width="40" height="40"/>Rare diseases in social media</a>
                                 <a class="dropdown-item" href="./html/scientific_publications.html"><img src="images/03_scientific_publications.svg" style="padding-right: 10px;" width="40" height="40"/>Rare diseases in scientific publications</a>
@@ -55,7 +60,7 @@
                 </div>
             </nav>
 
-        </div>
+<!--        </div>-->
     </div>
 </div>
 

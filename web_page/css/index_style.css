@@ -33,8 +33,8 @@ body {
     line-height: 30px;
     font-weight: bold;
     color: black;
-    text-align: center;
-    margin-right: 60px;
+    /*text-align: center;*/
+    /*margin-right: 60px;*/
     text-decoration: none;
     font-size: 18px;
 }
@@ -213,12 +213,19 @@ Noga in grid
         padding: 0 30px;
     /*    background-color: #6610f2;*/
     }
+    .collor {
+        margin-right: 100px;
+    }
 }
 
 @media all and (min-width: 769px) and (max-width: 992px) {
     .container {
         padding: 0 15px;
   /*      background-color: #1c7430;*/
+    }
+
+    .collor {
+        margin-right: 100px;
     }
 
     .div-width-title {
@@ -229,8 +236,8 @@ Noga in grid
         line-height: 30px;
         font-weight: bold;
         color: black;
-        text-align: center;
-        margin-right: 60px;
+        /*text-align: center;*/
+        /*margin-right: 60px;*/
         text-decoration: none;
         font-size: 18px;
     }
@@ -326,6 +333,12 @@ Noga in grid
     /*    background-color: #117a8b;*/
     }
 
+    .collor {
+        background: #6c757d;
+        padding: 20px;
+        min-width: 375px;
+    }
+
     .div-width-title {
         width: 200px;
     }
@@ -334,8 +347,8 @@ Noga in grid
         line-height: 30px;
         font-weight: bold;
         color: black;
-        text-align: center;
-        margin-right: 60px;
+        /*text-align: center;*/
+        /*margin-right: 60px;*/
         text-decoration: none;
         font-size: 18px;
     }
@@ -440,6 +453,12 @@ Noga in grid
      /*   background-color: #f1b0b7;*/
     }
 
+    .collor {
+        background: #6c757d;
+        padding: 20px;
+        min-width: 375px;
+    }
+
     .div-width-title {
         width: 140px;
     }
@@ -448,8 +467,8 @@ Noga in grid
         line-height: 30px;
         font-weight: bold;
         color: black;
-        text-align: center;
-        margin-right: 30px;
+        /*text-align: center;*/
+        /*margin-right: 30px;*/
         text-decoration: none;
         font-size: 16px;
     }
