@@ -557,4 +557,10 @@ Noga in grid
         width: 85px;
         height: 60px;
     }
+
+    .navbar-collapse {
+        margin-top: 20px;
+        background: white;
+        padding: 10px;
+    }
 }
